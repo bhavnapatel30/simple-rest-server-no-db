@@ -1,12 +1,21 @@
 <!DOCTYPE>
 <html>
 <head>
+<script>
+function displayData(){
+	var fname = document.forms["myForm"]["firstName"].value;
+	var lname = document.forms["myForm"]["lastName"].value;
+	document.getElementById("div1").innerHTML = "First Name: " + fname+"<br>"+"Last Name: "+lname;
+}
+</script>
 </head>
 <body>
-<form action="/users" method="POST">
-	First Name:<input type="text" name="firstName"><br>
-	Last Name:<input type="text" name="secondName"><br>
-	<input type="submit">
+<form  name="myForm" action="/users" method="post" onsubmit="return false">
+	First Name:<input type="text" name="firstName"></input><br>
+	Last Name:<input type="text" name="lastName"></input><br>
+	<input type="submit" name="submitForm" onclick="displayData()">
+	<div id="div1">
+	</div>
 </form>
 </body>
 </html>
