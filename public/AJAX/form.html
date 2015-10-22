@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#sub").on("click", function(e){
+		var fname = $("#first").val();
+		var lname = $("#last").val();
+		$.ajax({
+			url:"/users",
+			method:"POST",
+			data:{firstname:fname, lastname:lname},
+			success:function(data){
+				$("#div1").html("First Name: "+data.firstname+"<br>"+"Last Name: "+data.lastname)
+			}
+		});
+		e.preventDefault();
+	});
+});
+
+</script>
+</head>
+<body>
+<form>
+	First Name:<input type="text" name="firstName" id="first"></input><br>
+	Last Name:<input type="text" name="lastName" id="last"></input><br>
+	<input type="submit" id="sub">
+	<div id="div1">
+	</div>
+</form>
+</body>
+</html>

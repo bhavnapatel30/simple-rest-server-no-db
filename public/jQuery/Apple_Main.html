@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td{
+	border:1px solid black;
+	border-collapse:collapse;
+	
+}
+table{
+	width:40%;
+}
+td{
+	width:20%;
+	padding:20px;
+}
+ul{
+	list-style-type:none;
+}
+.changeColor{
+	color:red;
+}
+</style>
+
+<script src="../../jquery-1.11.3.js"></script>
+<script>
+$(document).ready(function(){
+	$("#div1").on("click", "li", display);
+	$("#div1").on("click", "button", addFruit);
+});
+
+function display(){
+	var ele = $(this).find("input");
+	var bool = true;
+	if($("#div2 li").length === 0)
+	{
+		bool = false;
+	}
+	else
+	{
+		$("#div2 li").each(function(){
+			if(($(this).text()) === (ele.next().text()))
+			{	
+				bool = true;
+				$(this).remove();
+				return false;
+			}
+			else
+			{		
+				bool = false;
+			}
+		});
+	}
+	if(bool == false)
+	{
+		var create_ul = $("<ul></ul>");
+		var get_text = ele.next().text();
+		var create_li = $("<li>"+get_text+"</li>");
+		$("#div2").append(create_ul);
+		create_ul.append(create_li);
+		$(this).addClass("changeColor");
+		ele.prop("checked", true);
+	}
+	else if(bool == true)
+	{
+		$(this).removeClass("changeColor");
+		ele.prop("checked", false);
+	}
+}
+function addFruit()
+{
+	var fruit = prompt("Enter a fruit:");
+	var create_li = "<br><li><input type='checkbox'><span>"+fruit+"</span></input></li>";
+	$(create_li).insertAfter("#div1 li:last");
+}
+</script>
+</head>
+<body>
+<table>
+	<tr>
+		<td>
+		<div id="div1">
+		<ul>
+			<li><input type="checkbox"><span>Apple</span></input></li><br>
+			<li><input type="checkbox"><span>Mango</span></input></li><br>
+			<li><input type="checkbox"><span>Grape</span></input></li><br>
+			<li><input type="checkbox"><span>Strawberry</span></input></li><br>
+			<li><input type="checkbox"><span>Cherry</span></input></li><br>
+			<button>Add</button>
+		</ul>
+		</div>
+		</td>
+		<td>
+		<div id="div2">
+		</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
