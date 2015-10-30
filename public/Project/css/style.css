@@ -1,0 +1,36 @@
+/* Navigation Bar */
+.navbar-default{
+	background:none;
+	border:none;
+	filter:none;
+	box-shadow:none;
+	
+	background-color:black;
+}
+.navbar .nav > li > a{
+	margin-left:15px;
+	text-shadow:none;
+}
+.navbar .nav > li > a:hover{
+	color:white;
+}
+.navbar .nav .active > a{
+	color:white;
+	background:none;
+}
+.navbar .nav .active > a:hover{
+	background:none;
+}
+
+/* List */
+.list{
+	margin-left:10px;
+}
+
+#d1{
+	margin-left:350px;
+	margin-right:10px;
+}
+.jumbotron{
+	margin-left:10px;
+}
