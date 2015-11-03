@@ -8,15 +8,7 @@ $(document).ready(function(){
 			method:"POST",
 			data:{itemName:iname, itemDescription:idescription, itemPrice:iprice},
 			success:function(data){
-				var create_div1 = $("<div></div>");
-				var create_h1 = $("<h3>"+data.itemName+"</h3>");
-				var create_p = $("<p>"+data.itemDescription+"</p>");
-				create_div1.addClass("jumbotron");
-				$("#d1").addClass("form-control");
-				$("#d1").addClass("container");
-				create_div1.append(create_h1);
-				create_div1.append(create_p);
-				$("#d1").append(create_div1);
+				$("#d1").append('<div class="well row"><div class="col-md-8"><h3>'+data.itemName+'</h3><p>'+data.itemDescription+'</p></div><div class="col-md-4"><button class="btn btn-primary">$'+data.itemPrice+'</button><span class="glyphicon glyphicon-remove-sign"></span></div></div>');
 			}
 		});
 		e.preventDefault();

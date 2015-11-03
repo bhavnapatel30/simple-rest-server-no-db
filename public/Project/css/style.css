@@ -27,10 +27,14 @@
 	margin-left:10px;
 }
 
-#d1{
-	margin-left:350px;
+/* Display List*/
+.well{
+	margin-left:330px;
 	margin-right:10px;
 }
-.jumbotron{
-	margin-left:10px;
+.col-md-4{
+	padding-top:20px;
+}
+.glyphicon{
+	margin-left:80px;
 }
