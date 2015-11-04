@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var temp;
+	var temp=0;;
 	$.ajax({
 		url:"/products",
 		method:"GET",
@@ -35,10 +35,10 @@ $(document).ready(function(){
 				url:"/products/"+x,
 				method:"DELETE",
 				success:function(data){
-					alert("successfully deleted");
+					$("#d1 div.well:has(span[id="+x+"])").remove();
 				}
 			});
-			$("#d1").empty();
+			
 		}
 	});
 });
