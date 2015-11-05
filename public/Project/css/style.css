@@ -22,17 +22,26 @@
 	background:none;
 }
 
-/* List */
-.list{
+/* Display Entry and List*/
+.column{
+	float:left;
+}
+.content{
 	margin-left:10px;
 }
 
+.column .content .list > ul{
+	width:300px;
+}
+.column1{
+	width:300px;
+}
+
+.column2{
+	width:1000px;
+}
 /* Display List*/
 
-#d1{
-	margin-left:350px;
-	margin-right:20px;
-}
 .col-md-4{
 	padding-top:20px;
 }
