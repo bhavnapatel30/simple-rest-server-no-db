@@ -23,7 +23,7 @@ $(document).ready(function(){
 				$("input[name=itemPrice]").val("");
 				$("#d1").append('<div class="well row"><div class="col-md-8"><h3>'+data.itemName+'</h3><p>'+data.itemDescription+'</p></div><div class="col-md-4"><button class="btn btn-primary">$'+data.itemPrice+'</button><a href="#"><span id='+data.id+' class="glyphicon glyphicon-remove-sign"></span></a></div></div>');
 			}
-		});//temp, form remove, design
+		});
 		e.preventDefault();
 	});
 	$("#d1").on("click", function(e){
@@ -34,8 +34,10 @@ $(document).ready(function(){
 			$.ajax({
 				url:"/products/"+x,
 				method:"DELETE",
-				success:function(data){
-					$("#d1 div.well:has(span[id="+x+"])").remove();
+				success:function(data, textStatus){
+					if(textStatus === "success"){
+						$("#d1 div.well:has(span[id="+x+"])").remove();
+					}
 				}
 			});
 			

@@ -1,3 +1,36 @@
-#d1{
-	margin-left:0px;
+.column2 .two{
+	width:850px;
+}
+@media screen and (max-width:800px){
+	.column2 .two{
+		width:750px;
+	}
+}
+@media screen and (max-width:700px){
+	.column2 .two{
+		width:650px;
+	}
+}
+@media screen and (max-width:600px){
+	.column2 .two{
+		width:550px;
+	}
+}
+@media screen and (max-width:500px){
+	.column2 .two{
+		width:450px;
+	}
+}
+@media screen and (max-width:400px){
+	.column2 .two{
+		width:350px;
+	}
+}
+@media screen and (max-width:300px){
+	.column2 .two{
+		width:250px;
+	}
+	.column .content .list > ul{
+		width:265px;
+	}
 }
