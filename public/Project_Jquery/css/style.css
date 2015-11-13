@@ -1,0 +1,33 @@
+/* Navigation Bar */
+#navbar-container{
+	margin-left:30px;
+}
+nav .container-fluid .navbar-header .navbar-brand
+{
+	display:none;
+}
+
+/* Display Entry and List*/
+.column{
+	float:left;
+}
+.content{
+	margin-left:15px;
+}
+
+.column1{
+	width:23%;
+}
+
+.column2{
+	width:75%;
+}
+
+#d1{
+	width:100%;
+}
+/* Display List*/
+
+.glyphicon{
+	margin-left:80px;
+}
