@@ -18,12 +18,13 @@ $(document).ready(function(){
 			method:"POST",
 			data:{itemName:iname, itemDescription:idescription, itemPrice:iprice},
 			success:function(data){
-				$("input[name=itemName]").val("");
-				$("input[name=itemDescription]").val("");
-				$("input[name=itemPrice]").val("");
+				iname = $("input[name=itemName]").val("");
+				idescription = $("input[name=itemDescription]").val("");
+				iprice = $("input[name=itemPrice]").val("");
+				
 				var source = $("#get-template").html();
 				var template = Handlebars.compile(source); 
-				var temp = template(data);
+				var temp = template([data]);
 				$("#d1").append(temp);
 			}
 		});
