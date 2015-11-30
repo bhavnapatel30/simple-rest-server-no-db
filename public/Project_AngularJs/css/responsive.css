@@ -1,0 +1,12 @@
+.column2{
+	width:95%;
+}
+.column1{
+	width:95%;
+}
+
+@media screen and (max-width:765px){
+	nav .container-fluid .navbar-header .navbar-brand{
+		display:block;
+	}
+}
