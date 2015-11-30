@@ -11,7 +11,6 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<!--<script src="js/displayData.js"></script>-->
 	<script src="js/handlebars-v4.0.4.js"></script>
 	
 </head>
@@ -56,7 +55,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="column column2" ng-controller="postItemCtrl">
+	<div class="column column2">
 		<div class="content two">
 			<form class="form-inline" role="form">
 				<label>Search</label>
@@ -82,7 +81,7 @@
 				</div>
 			</div>
 			
-			<div class="well row" ng-show="showme">
+			<!--<div class="well row" ng-show="showme">
 				<div class="col-md-8">
 					<h3>{{newItem.itemName}}</h3>
 					<p>{{newItem.itemDescription}}</p>
@@ -91,7 +90,7 @@
 					<button class="btn btn-primary">{{newItem.itemPrice | currency}}</button>
 					<a href="#"><span id={{newItem.id}} class="glyphicon glyphicon-remove-sign"></span></a>
 				</div>
-			</div>
+			</div>-->
 		</div>
 		
 	</div>
