@@ -55,7 +55,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="column column2">
+	<div class="column column2" ng-controller="itemsCtrl">
 		<div class="content two">
 			<form class="form-inline" role="form">
 				<label>Search</label>
@@ -69,7 +69,7 @@
 		</div>
 		
 		<!-- Display Block -->
-		<div id="d1" class="container-fluid content two alt" ng-controller="itemsCtrl"  ng-click="deleteData($event)"> 
+		<div id="d1" class="container-fluid content two alt" ng-click="deleteData($event)"> 
 			<div class="well row" ng-repeat="item in items">
 				<div class="col-md-8">
 					<h3>{{item.itemName}}</h3>
@@ -81,7 +81,7 @@
 				</div>
 			</div>
 			
-			<!--<div class="well row" ng-show="showme">
+			<div class="well row" ng-show="showme">
 				<div class="col-md-8">
 					<h3>{{newItem.itemName}}</h3>
 					<p>{{newItem.itemDescription}}</p>
@@ -90,7 +90,7 @@
 					<button class="btn btn-primary">{{newItem.itemPrice | currency}}</button>
 					<a href="#"><span id={{newItem.id}} class="glyphicon glyphicon-remove-sign"></span></a>
 				</div>
-			</div>-->
+			</div>
 		</div>
 		
 	</div>
